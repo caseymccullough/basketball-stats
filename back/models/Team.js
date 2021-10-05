@@ -17,10 +17,9 @@ const teamSchema = new mongoose.Schema({
    players: {
       type: Array, 
       required: true,
-      min: 2, 
-      max: 255
+      default: []
    }
 
 });
 
-module.exports = mongoose.model('Player', playerSchema);
+module.exports = mongoose.model('Team', teamSchema);

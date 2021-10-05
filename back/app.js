@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 // IMPORT ROUTES
 const playersRoute = require('./routes/players');
 const gamesRoute = require('./routes/games');
+const teamsRoute = require('./routes/teams');
 
 dotenv.config(); 
 
@@ -36,5 +37,6 @@ app.use('/posts', () => {
 
 app.use('/players', playersRoute);
 app.use('/games', gamesRoute);
+app.use('/teams', teamsRoute); 
 
 app.listen(3000);
